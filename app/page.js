@@ -1,9 +1,7 @@
 import Link from 'next/link'
 import CategoryCard from '@/components/CategoryCard'
 
-// Homepage component - Main landing page for Artistly platform
 export default function HomePage() {
-  // Artist category data for the category cards section
   const categories = [
     {
       name: 'Singers',
@@ -33,19 +31,22 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Main call-to-action area */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white pt-28 pb-20">
+      {/* Hero Section */}
+      <section className="pt-28 pb-20 text-white 
+  bg-gradient-to-r from-blue-600 to-purple-600 
+  dark:from-gray-900 dark:to-gray-950 
+  dark:text-white">
+
+
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Main headline */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Find Perfect Artists for Your Events
           </h1>
-          {/* Subtitle describing the platform */}
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto dark:text-gray-300">
             Connect with talented performing artists across India. From singers to speakers, 
             find the perfect match for your event needs.
           </p>
-          {/* Primary action buttons */}
           <div className="flex flex-col sm:flex-row justify-center sm:items-center gap-4 w-full sm:w-auto">
             <Link
               href="/artists"
@@ -60,44 +61,41 @@ export default function HomePage() {
               Join as Artist
             </Link>
           </div>
-
         </div>
       </section>
 
-      {/* Categories Section - Display different artist types */}
-      <section className="py-16 bg-gray-50">
+      {/* Categories Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Explore Artist Categories
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Discover talented artists across various categories to make your event memorable
             </p>
           </div>
-          
-          {/* Category cards grid - Responsive layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category, index) => (
-              // Render each category as a clickable card
               <CategoryCard key={index} category={category} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Call-to-Action Section - Final conversion area */}
-      <section className="py-16 bg-blue-600 text-white">
+      {/* CTA Section */}
+      <section className="py-16 bg-blue-600 text-white dark:bg-gray-900 dark:text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Book Your Next Artist?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of event planners who trust Artistly for their entertainment needs
+          <p className="text-xl mb-8 max-w-2xl mx-auto dark:text-gray-300">
+            Join thousands of event planners who trust Artistly to discover and hire talent.
           </p>
-          {/* Final CTA button */}
-          <Link href="/artists" className="bg-white text-blue-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors inline-block">
+          <Link
+            href="/artists"
+            className="bg-white text-blue-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors inline-block"
+          >
             Get Started Now
           </Link>
         </div>
@@ -105,11 +103,6 @@ export default function HomePage() {
     </div>
   )
 }
-
-
-
-
-
 
 
 

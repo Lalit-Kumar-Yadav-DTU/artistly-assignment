@@ -41,9 +41,9 @@ export default function OnboardPage() {
   if (submitted) {
     return (
       <div className="min-h-screen flex items-center justify-center text-center px-4">
-        <div className="bg-white shadow rounded p-6 max-w-md">
+        <div className="bg-white dark:bg-gray-800 shadow rounded p-6 max-w-md text-gray-900 dark:text-white">
           <h2 className="text-2xl font-bold text-green-600 mb-4">Application Submitted!</h2>
-          <p className="text-gray-700 mb-4">Thank you for joining Artistly. We’ll review your profile soon.</p>
+          <p className="text-gray-700 dark:text-gray-300 mb-4">Thank you for joining Artistly. We’ll review your profile soon.</p>
           <button onClick={() => setSubmitted(false)} className="bg-blue-600 text-white px-4 py-2 rounded">
             Submit Another
           </button>
@@ -53,25 +53,22 @@ export default function OnboardPage() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12">
+    <div className="max-w-3xl mx-auto px-4 py-12 text-gray-900 dark:text-white">
       <h1 className="text-3xl font-bold mb-6 text-center">Artist Onboarding Form</h1>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 bg-white p-6 rounded shadow">
-        {/* Name */}
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 bg-white dark:bg-gray-800 p-6 rounded shadow">
         <div>
           <label className="font-medium">Name *</label>
-          <input {...register('name')} className="input" placeholder="Artist or Group Name" />
+          <input {...register('name')} className="input bg-white dark:bg-gray-900 dark:text-white w-full border p-2 rounded" placeholder="Artist or Group Name" />
           {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>}
         </div>
 
-        {/* Bio */}
         <div>
           <label className="font-medium">Bio *</label>
-          <textarea {...register('bio')} rows={4} className="input" placeholder="Tell us about yourself" />
+          <textarea {...register('bio')} rows={4} className="input bg-white dark:bg-gray-900 dark:text-white w-full border p-2 rounded" placeholder="Tell us about yourself" />
           {errors.bio && <p className="text-red-600 text-sm mt-1">{errors.bio.message}</p>}
         </div>
 
-        {/* Categories */}
         <div>
           <label className="font-medium">Categories *</label>
           <div className="grid grid-cols-2 gap-2 mt-2">
@@ -89,7 +86,6 @@ export default function OnboardPage() {
           {errors.categories && <p className="text-red-600 text-sm mt-1">{errors.categories.message}</p>}
         </div>
 
-        {/* Languages */}
         <div>
           <label className="font-medium">Languages Spoken *</label>
           <div className="grid grid-cols-2 gap-2 mt-2">
@@ -107,10 +103,9 @@ export default function OnboardPage() {
           {errors.languages && <p className="text-red-600 text-sm mt-1">{errors.languages.message}</p>}
         </div>
 
-        {/* Fee */}
         <div>
           <label className="font-medium">Fee Range *</label>
-          <select {...register('feeRange')} className="input">
+          <select {...register('feeRange')} className="input bg-white dark:bg-gray-900 dark:text-white w-full border p-2 rounded">
             <option value="">Select Fee Range</option>
             {feeOptions.map((fee) => (
               <option key={fee} value={fee}>{fee}</option>
@@ -119,14 +114,12 @@ export default function OnboardPage() {
           {errors.feeRange && <p className="text-red-600 text-sm mt-1">{errors.feeRange.message}</p>}
         </div>
 
-        {/* Location */}
         <div>
           <label className="font-medium">Location *</label>
-          <input {...register('location')} className="input" placeholder="City, State" />
+          <input {...register('location')} className="input bg-white dark:bg-gray-900 dark:text-white w-full border p-2 rounded" placeholder="City, State" />
           {errors.location && <p className="text-red-600 text-sm mt-1">{errors.location.message}</p>}
         </div>
 
-        {/* Submit */}
         <div className="text-center">
           <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded">
             Submit Application

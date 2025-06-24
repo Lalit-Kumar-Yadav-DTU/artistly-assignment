@@ -30,16 +30,16 @@ const mockArtists = [
 ]
 
 export default function DashboardPage() {
-  const [artists, setArtists] = useState(mockArtists)
+  const [artists] = useState(mockArtists)
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">Admin Dashboard</h1>
+    <div className="max-w-6xl mx-auto p-6 text-gray-900 dark:text-white">
+      <h1 className="text-3xl font-bold mb-6">Admin Dashboard</h1>
 
-      <div className="overflow-x-auto rounded-lg shadow border border-gray-200">
-        <table className="min-w-full bg-white divide-y divide-gray-200">
-          <thead className="bg-gray-100">
-            <tr className="text-left text-sm font-medium text-gray-700">
+      <div className="overflow-x-auto rounded-lg shadow border border-gray-200 dark:border-gray-700">
+        <table className="min-w-full bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
+          <thead className="bg-gray-100 dark:bg-gray-800">
+            <tr className="text-left text-sm font-medium text-gray-700 dark:text-gray-300">
               <th className="px-4 py-3">Name</th>
               <th className="px-4 py-3">Category</th>
               <th className="px-4 py-3">Location</th>
@@ -47,9 +47,9 @@ export default function DashboardPage() {
               <th className="px-4 py-3">Fee</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-100 text-sm">
+          <tbody className="divide-y divide-gray-100 dark:divide-gray-800 text-sm">
             {artists.map((artist, index) => (
-              <tr key={index} className="hover:bg-gray-50">
+              <tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-800">
                 <td className="px-4 py-3 font-semibold">{artist.name}</td>
                 <td className="px-4 py-3">{artist.categories.join(', ')}</td>
                 <td className="px-4 py-3">{artist.location}</td>
