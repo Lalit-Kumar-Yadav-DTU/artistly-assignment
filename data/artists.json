@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Priya Sharma",
+    "category": "Singer",
+    "priceRange": "₹25,000 - ₹50,000",
+    "location": "Mumbai",
+    "bio": "Classical and Bollywood vocalist with 10+ years experience in weddings and corporate events",
+    "languages": ["Hindi", "English", "Marathi"],
+    "image": "/placeholder-artist.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Rajesh Kumar",
+    "category": "DJ",
+    "priceRange": "₹15,000 - ₹30,000",
+    "location": "Delhi",
+    "bio": "Professional DJ specializing in weddings and corporate events with modern sound equipment",
+    "languages": ["Hindi", "English", "Punjabi"],
+    "image": "/placeholder-artist.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Anita Dance Troupe",
+    "category": "Dancer",
+    "priceRange": "₹40,000 - ₹80,000",
+    "location": "Bangalore",
+    "bio": "Contemporary and traditional dance performances for cultural events and celebrations",
+    "languages": ["English", "Kannada", "Tamil"],
+    "image": "/placeholder-artist.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Vikram Patel",
+    "category": "Speaker",
+    "priceRange": "₹50,000 - ₹100,000",
+    "location": "Pune",
+    "bio": "Motivational speaker and business consultant with expertise in leadership and entrepreneurship",
+    "languages": ["English", "Hindi", "Marathi"],
+    "image": "/placeholder-artist.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Meera Classical",
+    "category": "Singer",
+    "priceRange": "₹30,000 - ₹60,000",
+    "location": "Chennai",
+    "bio": "Carnatic classical music specialist for traditional ceremonies and cultural programs",
+    "languages": ["Tamil", "Telugu", "English"],
+    "image": "/placeholder-artist.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Beat Masters",
+    "category": "DJ",
+    "priceRange": "₹20,000 - ₹40,000",
+    "location": "Hyderabad",
+    "bio": "Electronic music and remix specialists for parties and youth events",
+    "languages": ["English", "Telugu", "Hindi"],
+    "image": "/placeholder-artist.jpg"
+  }
+]
