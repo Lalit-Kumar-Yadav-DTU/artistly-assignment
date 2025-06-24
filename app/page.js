@@ -34,7 +34,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Main call-to-action area */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -46,14 +46,21 @@ export default function HomePage() {
             find the perfect match for your event needs.
           </p>
           {/* Primary action buttons */}
-          <div className="space-x-4">
-            <Link href="/artists" className="bg-white text-blue-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors inline-block">
+          <div className="flex flex-col sm:flex-row justify-center sm:items-center gap-4 w-full sm:w-auto">
+            <Link
+              href="/artists"
+              className="bg-white text-blue-600 px-6 py-3 rounded font-medium hover:bg-gray-100 transition"
+            >
               Browse Artists
             </Link>
-            <Link href="/onboard" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-medium py-3 px-8 rounded-lg transition-colors inline-block">
+            <Link
+              href="/onboard"
+              className="border-2 border-white text-white px-6 py-3 rounded font-medium hover:bg-white hover:text-blue-600 transition"
+            >
               Join as Artist
             </Link>
           </div>
+
         </div>
       </section>
 
