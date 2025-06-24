@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-const mockArtists = [
+const mockArtists = [  //this function is used to mock the data for the artists
   {
     name: 'Priya Sharma',
     bio: 'Energetic Bollywood performer with 5 years of experience at live events across India.',

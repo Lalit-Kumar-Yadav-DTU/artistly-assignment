@@ -4,7 +4,9 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { useState } from 'react'
-
+ 
+// This is a client component
+// It uses react-hook-form for form handling and yup for validation
 const schema = yup.object({
   name: yup.string().required('Name is required').min(2),
   bio: yup.string().required('Bio is required').min(50),

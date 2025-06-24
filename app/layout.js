@@ -7,7 +7,8 @@ export const metadata = {
   description: 'Connect event planners with talented performing artists',
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }) {  // This is a server component
+  // This layout wraps the entire application, providing a consistent structure
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased">
